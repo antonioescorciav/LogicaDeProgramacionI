@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>Promedio de IMC (Índice Masa Corporal)</h1>
+
+<script>
+    function saltarLinea() 
+    {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>"); 
+        document.write("<hr>"); 
+        document.write("<br>");  
+    }  
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+
+    function calcularImc(peso, altura)
+    {
+        var imc = peso / (Math.pow (altura, 2)); 
+        return imc; 
+    }
+    
+    //con el método "prompt" recibe el dato que ingrese el usuario 
+    var nombre = prompt ("digite nombre"); 
+    var pesoUsuario = prompt (nombre + ", digite peso"); 
+    var alturaUsuario = prompt (nombre + ", digite altura"); 
+    
+
+    var imcUsuario = calcularImc(pesoUsuario, alturaUsuario);
+
+    imprimir (nombre + " tu imc es: " + imcUsuario); 
+
+
+</script>

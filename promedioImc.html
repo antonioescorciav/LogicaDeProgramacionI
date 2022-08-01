@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>Promedio de IMC (Índice Masa Corporal)</h1>
+
+<script>
+    function saltarLinea() 
+    {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>"); 
+        document.write("<hr>"); 
+        document.write("<br>");  
+    }  
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    //forma larga de sacarle promedio al imc de dos personas
+    /* function calcularImc(peso1, altura1, nombre1, peso2, altura2, nombre2)
+    {
+        var imc1 = peso1 / (Math.pow (altura1, 2)); 
+        imprimir ("el imc de " + nombre1 + " es " + imc1); //con "return" regresa el valor de la función
+        var imc2 = peso2 / (Math.pow (altura2, 2)); 
+        imprimir ("el imc de " + nombre2 + " es " + imc2);
+        var promedio = (imc1 + imc2) / 2; 
+        imprimir ("el promedio es: " + promedio); 
+    } */
+
+    //forma optimizada 1
+    function calcularImc(peso, altura)
+    {
+        var imc = peso / (Math.pow (altura, 2)); 
+        return imc; 
+    }
+    
+    var imcAntonio = calcularImc(63, 1.71);
+    var imcDario = calcularImc(68, 1.80);
+    imprimir ("el promedio de imc de Antonio y Dario es: " + ((imcAntonio + imcDario) / 2)); 
+
+
+</script>

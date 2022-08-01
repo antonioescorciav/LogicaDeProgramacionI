@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>Cálculo IMC (Índice Masa Corporal)</h1>
+
+<script>
+    function saltarLinea() 
+    {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>"); 
+        document.write("<hr>"); 
+        document.write("<br>");  
+    }  
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();
+    }
+
+    function calcularImc(peso, altura, nombre)
+    {
+        var imc = peso / (Math.pow (altura, 2)); 
+        imprimir ("el imc de " + nombre + " es " + imc); //con "return" regresa el valor de la función
+    }
+    
+    calcularImc(63, 1.71, "Antonio"); 
+
+</script>
